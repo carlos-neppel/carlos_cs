@@ -24,7 +24,9 @@ namespace Aula10_05
 
             Cliente cli2 = new Cliente("jucicreia");
             Console.WriteLine("cli2.Nome:" + cli2.Nome);
-            //Cliente cli3 = new Cliente("Juciliuda", "123");
+            Cliente cli3 = new Cliente("Juciliuda", "123");
+
+            Pessoa p = new Pessoa();
 
         }
     }

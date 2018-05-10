@@ -20,6 +20,11 @@ namespace Aula10_05
 
         }
 
+        public Cliente (string nome, string cpf): base (nome, cpf)
+        {
+
+        }
+
     }     
 
 }
