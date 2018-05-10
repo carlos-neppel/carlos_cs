@@ -24,9 +24,13 @@ namespace Aula10_05
 
             Cliente cli2 = new Cliente("jucicreia");
             Console.WriteLine("cli2.Nome:" + cli2.Nome);
-            Cliente cli3 = new Cliente("Juciliuda", "123");
 
-            Pessoa p = new Pessoa();
+            Cliente cli3 = new Cliente("Juciliuda", "123");
+            cli3.DataNasc = new DateTime(1950, 05, 05);
+            Console.WriteLine(cli3.Nome + "nasceu em  " + cli3.DataNasc);
+
+            //ERRO: classes abstratas nao podem ser instanciadas
+            //Pessoa p = new Pessoa();
 
         }
     }
