@@ -8,16 +8,25 @@ namespace Aula10_05
 {
     class Cliente : Pessoa
     {
-        private DateTime dataNasc { get; set }
+        private DateTime DataNasc { get; set }
+        
+
 
         public string dataQueNasceu
         {
             get
             {
-                return dataNasc.ToShortDateString();
+                return DataNasc.ToShortDateString();
             }
         }
 
+        public int Idade
+        {
+            get
+            {
+                //DateTime.Today = hoje
+            }
+        }
 
         public int MyProperty { get; set; }
 
