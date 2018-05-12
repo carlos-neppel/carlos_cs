@@ -8,11 +8,10 @@ namespace Aula10_05
 {
     class Cliente : Pessoa
     {
-        private DateTime DataNasc { get; set }
-        
 
+        public DateTime DataNasc { get; set; }
 
-        public string dataQueNasceu
+        public string DataQueNasceu
         {
             get
             {
@@ -24,26 +23,26 @@ namespace Aula10_05
         {
             get
             {
-                //DateTime.Today = hoje
+                return DateTime.Today.Year - DataNasc.Year;
             }
         }
 
-        public int MyProperty { get; set; }
-
         public Cliente()
         {
+
         }
 
-       public Cliente (string nome) : base(nome)
+        public Cliente(string nome) : base(nome)
         {
 
         }
 
-        public Cliente (string nome, string cpf): base (nome, cpf)
+        public Cliente(string nome, string cpf) :
+            base(nome, cpf)
         {
 
         }
 
-    }     
 
+    }
 }

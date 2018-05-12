@@ -6,31 +6,29 @@ using System.Threading.Tasks;
 
 namespace Aula10_05
 {
-    class Pessoa
+    public abstract class Pessoa
     {
-        //Atributo
+        // Atributo
         private string nome;
-        private string cpf;
 
-
-        //Propriendade
+        // Propriedades
         public string Nome
         {
             get
             {
                 return nome;
             }
+
             set
             {
                 nome = value;
             }
         }
 
-
         public string Cpf { get; set; }
-        //contrutor
 
-        public Pessoa() //contrutor vazio
+        // Construtores
+        public Pessoa() // Construtor vazio
         {
 
         }
@@ -38,20 +36,12 @@ namespace Aula10_05
         public Pessoa(string nome)
         {
             Nome = nome;
-
         }
 
-        public Pessoa(string nome , string cpf)
-            {
-                 Nome = nome;
-                 Cpf = cpf;
-            }
-                
-            
-
-
-
-}
-
+        public Pessoa(string nome, string cpf)
+        {
+            Nome = nome;
+            Cpf = cpf;
+        }
     }
-
+}
