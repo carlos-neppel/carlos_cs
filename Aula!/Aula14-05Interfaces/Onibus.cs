@@ -14,6 +14,12 @@ namespace Aula14_05Interfaces
 
         public int Velocidade { get; set; }
 
+        //cheve para objetos MArca
+        public int MarcaId { get; set; }
+
+        //Propriedade de navegação
+        public virtual  Marca _Marca{ get; set; }
+
         public Onibus()
         {
 

@@ -48,4 +48,35 @@ namespace Aula14_05Interfaces
             meioTrasporte.acelerar();
         }
     }
+
+
+   static  void CriarRelacionamentos()
+    {
+        Carro c = new Carro();
+        c.Modelo = "Corsa";
+
+        Marca m = new Marca();
+        m.Nome = "Chevrolet";
+        c._Marca = m;
+
+        Onibus o = new Onibus();
+        o.Modelo = "Chevrolet";
+        o._Marca = m;
+        
+
+
+        //criando e armazemando rodas
+
+        c.Rodas = new List<Roda>();
+        Roda r1 = new Roda();
+        
+
+        Console.WriteLine("qtd rodas: " + c.Rodas.Count);
+
+        for (int i =  0; i  <  3; i++)
+        {
+            c.Rodas.Add(r1);
+        }
+
+    }
 }
