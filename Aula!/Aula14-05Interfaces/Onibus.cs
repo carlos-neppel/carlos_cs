@@ -5,15 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Aula14_05Interfaces
-{
-    class Carro : IMeioTrasporte
-    {
-        public int Velocidade { get; set; }
-        public Carro()
-        {
-            Velocidade = 0;
-        }
 
+
+{
+    class Onibus : IMeioTrasporte
+
+    {
+
+        public int Velocidade { get; set; }
+
+        public Onibus()
+        {
+
+            Velocidade = 0;
+
+        }
         public void acelerar()
         {
             Velocidade += 10;
@@ -21,12 +27,11 @@ namespace Aula14_05Interfaces
 
         public void desacelerar()
         {
-            Velocidade -= 5;
+            Velocidade -= 10;
         }
-
-       public string ImprimirInfo()
+        public string ImprimirInfo()
         {
-            return "carro, velicidade atual " + Velocidade;
+            return "Onibus, velicidade atual " + Velocidade;
         }
     }
 }

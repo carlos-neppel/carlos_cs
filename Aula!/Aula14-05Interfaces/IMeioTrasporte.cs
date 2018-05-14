@@ -10,6 +10,8 @@ namespace Aula14_05Interfaces
     {
         void acelerar();
         void desacelerar();
+        void AcelerarBastante();
+
 
     }
 }
