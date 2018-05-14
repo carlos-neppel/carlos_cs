@@ -41,8 +41,4 @@ namespace Aula10_05
             base(nome, cpf)
         {
 
-        }
-
-
-    }
-}
+        }}}

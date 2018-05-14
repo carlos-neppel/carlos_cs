@@ -39,8 +39,11 @@ namespace Aula10_05
               cli3.Nome + " tem " + cli3.Idade + " anos."
               );
 
-            //Pessoa p = new Pessoa(); // ERRO: classes abstratas nao podem ser instanciadas
+             //Pessoa p = new Pessoa(); // ERRO: classes abstratas nao podem ser instanciadas
+          
 
+
+            
 
             Console.ReadKey();
         }
