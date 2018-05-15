@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace Aula14_05Interfaces
 {
-    class Carro : IMeioTrasporte
+    class Carro : IMeioTransporte
     {
         public int Velocidade { get; set; }
-        //cheve para objetos MArca
-        public int MarcaId { get; set; }
 
-        //Propriedade de navegação
+        public string Modelo { get; set; }
+
+        // chave para objeto Marca
+        public int MarcaID { get; set; }
+
+        // Propriedade de navegacao
         public virtual Marca _Marca { get; set; }
+
 
         public List<Roda> Rodas { get; set; }
 
@@ -23,19 +27,19 @@ namespace Aula14_05Interfaces
             Velocidade = 0;
         }
 
-        public void acelerar()
+        public void Acelerar()
         {
             Velocidade += 10;
         }
 
-        public void desacelerar()
+        public void Desacelerar()
         {
             Velocidade -= 5;
         }
 
-       public string ImprimirInfo()
+        public string ImprimirInfo()
         {
-            return "carro, velicidade atual " + Velocidade;
+            return "Carro, velocidade atual: " + Velocidade;
         }
     }
 }

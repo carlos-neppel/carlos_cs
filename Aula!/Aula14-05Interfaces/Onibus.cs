@@ -5,39 +5,39 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Aula14_05Interfaces
-
-
 {
-    class Onibus : IMeioTrasporte
-
+    class Onibus : IMeioTransporte
     {
-
         public int Velocidade { get; set; }
 
-        //cheve para objetos MArca
-        public int MarcaId { get; set; }
+        public string Modelo { get; set; }
 
-        //Propriedade de navegação
-        public virtual  Marca _Marca{ get; set; }
 
-        public Onibus()
+        // chave para objeto Marca
+        public int MarcaID { get; set; }
+
+        // Propriedade de navegacao
+        public virtual Marca _Marca { get; set; }
+
+
+        public void Acelerar()
         {
-
-            Velocidade = 0;
-
-        }
-        public void acelerar()
-        {
-            Velocidade += 10;
+            Velocidade += 6;
         }
 
-        public void desacelerar()
+        public void Desacelerar()
         {
-            Velocidade -= 10;
+            Velocidade -= 3;
         }
+
         public string ImprimirInfo()
         {
-            return "Onibus, velicidade atual " + Velocidade;
+            return "Ônibus, velocidade atual: " + Velocidade;
         }
+    }
+
+    internal interface IMeioTransporte
+    {
+        void Acelerar();
     }
 }

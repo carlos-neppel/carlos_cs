@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Aula14_05Interfaces
 {
-    class Marca 
+    class Marca
     {
-        public int MarcaId { get; set; }
-        public string Nome{ get; set; }
-
-
+        public int MarcaID { get; set; }
+        public string Nome { get; set; }
     }
 }

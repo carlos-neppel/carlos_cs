@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Carro.cs" />
-    <Compile Include="IMeioTrasporte.cs" />
+    <Compile Include="IMeioTransporte1.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Onibus.cs" />
     <Compile Include="Program.cs" />
