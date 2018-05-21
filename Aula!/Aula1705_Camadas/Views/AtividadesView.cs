@@ -50,7 +50,7 @@ namespace Aula1705_Camadas.Views
                 Console.WriteLine("= 9) Sair ");
                 Console.WriteLine("======================");
 
-                opcao =(opcoesMenu) int.Parse(Console.ReadLine());
+                opcao = (opcoesMenu) int.Parse(Console.ReadLine());
 
 
 
@@ -75,8 +75,18 @@ namespace Aula1705_Camadas.Views
                     case OpcoesMenu.ExcluirAtividade:
                         ExcluirAtividade();
                         break;
+                    case OpcoesMenu.BuscarAtividadepornome:
 
+                        BuscarAtividadepornome();
+                        break;
+                        
+                    case OpcoesMenu.ListarAtividadeAtivoInativo:
+                        ListarAtividadeAtivoInativo();
 
+                        break;
+                    case OpcoesMenu.Sair:
+                        break;
+                                              
                     default:
                         Console.WriteLine("Opções invalida!");
                         break;
