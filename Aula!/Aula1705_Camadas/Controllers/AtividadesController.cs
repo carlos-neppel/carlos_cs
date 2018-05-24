@@ -8,6 +8,7 @@ namespace Aula1705_Camadas.Controllers
     {
         // simulando tabela
         private static List<Atividade> ListaAtividades { get; set; } //= new List<Atividade>();
+        private static int UltimoIdUtilizado = 0;
 
         static AtividadesController()
         {
@@ -16,7 +17,7 @@ namespace Aula1705_Camadas.Controllers
         //Salvar
         public void Salvar(Atividade atividade)
         {
-            atividade.AtividadeID = ListaAtividades.Count + 1;
+            atividade.AtividadeID = ++UltimoIdUtilizado;
             ListaAtividades.Add(atividade);
         }
 
