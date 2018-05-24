@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos
+namespace Controllers
 {
-    public class Class1
+    class UsuariosController
     {
     }
 }

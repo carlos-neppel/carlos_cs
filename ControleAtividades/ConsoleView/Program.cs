@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleView
 {
-    public class Class1
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }
