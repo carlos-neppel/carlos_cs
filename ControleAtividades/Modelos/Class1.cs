@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    public class Usuario
+    public class Class1
     {
-        public int UsuarioId { get; set; }
-        
-        public String Nome { get; set; }
-
     }
 }
