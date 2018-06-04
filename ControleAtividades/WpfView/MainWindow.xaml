@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfView"
+        mc:Ignorable="d"
+        Title="Projeto teste Aula C sharp " Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Salvar" HorizontalAlignment="Left" Margin="184,43,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="48,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.93,-0.333"/>
+        <ComboBox HorizontalAlignment="Left" Margin="48,112,0,0" VerticalAlignment="Top" Width="120">
+            <Button Content="botão 03"/>
+            <Button Content="botão 01"/>
+            <Button Content="botão 02"/>
+        </ComboBox>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="48,156,0,0" TextWrapping="Wrap" Text="digite o seu texto" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
