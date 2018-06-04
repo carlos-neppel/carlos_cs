@@ -16,9 +16,6 @@ namespace Modelos
 
         public int UsuarioID { get; set; }
 
-        public object ToLower()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

@@ -1,70 +1,50 @@
 ﻿using System.Collections.Generic;
 using Modelos;
 using System.Linq;
+using Controllers.DAL;
+using Controllers.Base;
 
 namespace Controllers
 {
-    public  class AtividadesController 
+    public class AtividadesController : IBaseController<Atividade>       
     {
-        private static List<Atividade> ListaAtividade { get; set; }
+        private Contexto contexto = new Contexto();
 
-        private static int uUtimoIdUtilizado = 1;
-        static AtividadesController()
+
+        public void Adicionar(Atividade entity)
         {
-            ListaAtividade = new List<Atividade>();
+            contexto.Atividades.Add(entity);
+            contexto.SaveChanges();
         }
-
-        //salvar
-        public void Salvar(Atividade atividade)
-        {
-            atividade.AtividadeID = uUtimoIdUtilizado++;
-            ListaAtividade.Add(atividade);
-        }
-        //Listar
-
-        public List<Atividade> Listar()
-        {
-            return ListaAtividade;
-        }
-
-        //BsucarPorId
 
         public Atividade BuscarPorId(int id)
-        { 
-            foreach (Atividade a in ListaAtividade)
-            {
-                if (a.AtividadeID == id)
-                {
-                    return a;
-                }
-            }
-
-            return null;
-
-        }
-
-        //BuscarPorNome
-
-        public List<Atividade>  BuscarPorNome(string nome)
         {
-            IEnumerable<Atividade> AtividadeSelecionada = new List<Atividade>();
-            AtividadeSelecionada = from x in ListaAtividade
-                                   where x.Nome.ToLower().Contains(nome.ToLower())
-                                   select x;
-            return AtividadeSelecionada.ToList();
+            return contexto.atividades.Find(id)
+        }
+
+        public IList<Atividade> ListarPorNome(string nome)
+        {
+            /*var atividadeComNome = from a in contexto.Atividades
+                        where a.Nome == nome
+                        select a;
+            return atividadeComNome.ToList;*/
+
+            //lamba
+            return contexto.Atividades.Where(a => a.Nome.ToLower() == nome.ToLower()).ToList();
 
         }
-        //BuscarAtivoInativo
 
-        public List<Atividade> BuscaAtivoInativo (bool ativo)
+        public void Atualizar(Atividade entity)
         {
 
+            contexto.Entry(entity).State = 
+                System.Data.Entity.EntityState.Modified;
+            contexto.SaveChanges();
+
         }
 
 
 
 
-
-
-    }
+     }
 }
