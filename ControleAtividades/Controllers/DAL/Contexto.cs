@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Controllers
+namespace Controllers.DAL
 {
-    class UsuariosController
+    class Contexto
     {
-
     }
 }

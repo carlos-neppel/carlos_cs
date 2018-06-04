@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Controllers
 {
-    class AtividadesController
+    public  class AtividadesController 
     {
         private static List<Atividade> ListaAtividade { get; set; }
 
@@ -49,10 +49,20 @@ namespace Controllers
         {
             IEnumerable<Atividade> AtividadeSelecionada = new List<Atividade>();
             AtividadeSelecionada = from x in ListaAtividade
-                                   where x.
+                                   where x.Nome.ToLower().Contains(nome.ToLower())
+                                   select x;
+            return AtividadeSelecionada.ToList();
 
         }
-            
+        //BuscarAtivoInativo
+
+        public List<Atividade> BuscaAtivoInativo (bool ativo)
+        {
+
+        }
+
+
+
 
 
 

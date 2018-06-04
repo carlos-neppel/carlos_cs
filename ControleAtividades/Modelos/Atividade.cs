@@ -1,4 +1,6 @@
-﻿namespace Modelos
+﻿using System;
+
+namespace Modelos
 {
     public class Atividade
     {
@@ -14,5 +16,9 @@
 
         public int UsuarioID { get; set; }
 
+        public object ToLower()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
